@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <style>
+
+        :root {
+            --content-color: #CAEFF2 ;
+            --aside-color: #F2D8CA;
+            --header-color: #92DFC8;
+            --box-color: #F2F1CA;
+            --footer-color: #EECBF3;
+        }
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: var(--header-color);
+            text-align: center;
+            padding: 20px 30px;
+        }
+
+        .section-one {
+            display: flex;
+            height: 500px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .section-one .content {
+            flex-grow: 7;
+            background-color: var(--content-color);
+            text-align: center;
+            padding-top: 130px;
+            
+        }
+
+        .section-one .aside {
+            flex-grow: 3;
+            background-color: var(--aside-color);
+            text-align: center;
+            padding-top: 130px;
+        }
+
+        .section-two {
+            display: flex;
+            height: 150px;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .section-two .box {
+            background-color: var(--box-color);
+            width: calc(100% / 4 - 10px);
+            padding-top : 50px;
+            text-align: center;
+        }
+
+        .footer {
+            height: 100px;
+            text-align: center;
+            background-color: var(--footer-color);
+            padding-top: 40px;
+        }
+
+        @media (max-width : 768px){
+            .section-one .content {
+                width: 100%;
+            }
+
+            .section-two .box {
+                width: 49%;
+                margin-bottom: 10px;
+                padding-top: 25px;
+            }
+        }
+
+        
+        @media (max-width: 480px){
+            .section-two .box {
+                width: 100%;
+                padding-top: 5px;
+            }
+        }
+    </style>
+
+<body>
+
+    <header class="header">
+        HEADER
+    </header>
+
+    <section class="section-one">
+        <div class="content">
+            CONTENT
+        </div>
+
+        <div class="aside">
+           ASIDE 
+        </div>
+    </section>
+
+    <section class="section-two">
+        <div class="box">Bài 1</div>
+        <div class="box">Bài 2</div>
+        <div class="box">Bài 3</div>
+        <div class="box">Bài 4</div>
+    </section>
+
+    <footer class="footer">
+        FOOTER
+    </footer>
+</body>
+</html>
